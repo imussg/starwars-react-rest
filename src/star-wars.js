@@ -2,7 +2,6 @@ function _search(name) {
     if (Math.random() < 0.25) {
         return Promise.reject('Something went wrong');
     }
-
     return fetch(`https://swapi.co/api/people/?search=${name}`).then(res => {
         if (!res.ok) {
             return Promise.reject(res.statusText);
